@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tribute to Dr. APJ Abdul Kalam</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #7a7a7a;
+        }
+
+        header {
+            text-align: center;
+            background-color: #000000;
+            color: white;
+            padding: 20px;
+        }
+
+        .slideshow-container {
+    width: 60%;
+    height: 400px;
+    position: relative;
+    margin: auto;
+    background-color: #e8f5e9;
+    padding: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.slides {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+        .slides {
+            display: none;
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .video-section {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .split-section {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .split-section div {
+            width: 45%;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            text-align: center;
+            background-color: #000000;
+            color: white;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dr. APJ Abdul Kalam</h1>
+    </header>
+
+    <!-- Slideshow Section -->
+    <div class="slideshow-container">
+        <img class="slides" src="img-1.jpg" alt="Dr. Kalam speaking">
+        <img class="slides" src="img-2.jpg" alt="Dr. Kalam with students">
+        <img class="slides" src="img-3.jpg" alt="Dr. Kalam receiving award">
+        <img class="slides" src="img-4.jpg" alt="Dr. Kalam at ISRO">
+        <img class="slides" src="img-5.jpg" alt="Dr. Kalam in an event">
+    </div>
+
+    <script>
+        let slideIndex = 0;
+        function showSlides() {
+            let slides = document.getElementsByClassName("slides");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1; }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 1000); // Change every 5 seconds
+        }
+        showSlides();
+    </script>
+
+    <!-- Information Section -->
+    <div class="info">
+        <h2>About Dr. APJ Abdul Kalam</h2>
+        <p>
+            Dr. Avul Pakir Jainulabdeen Abdul Kalam, widely known as the "Missile Man of India," was one of the most inspiring figures in Indian history. Born on October 15, 1931, in Rameswaram, Tamil Nadu, he rose from humble beginnings to become a globally respected scientist, educator, and the 11th President of India.
+
+Dr. Kalam's life was dedicated to science, innovation, and youth development. His remarkable career began at the Defense Research and Development Organization (DRDO) and the Indian Space Research Organisation (ISRO), where he played pivotal roles in India's space and defense programs. He spearheaded the development of India's indigenous missile systems, including the Agni and Prithvi missiles, earning him the title "Missile Man."
+
+As the Chief Scientific Adviser to the Government of India, he was instrumental in the success of the Pokhran-II nuclear tests in 1998, cementing India's position as a nuclear power. Despite his scientific achievements, Dr. Kalam was deeply connected to the youth and believed in their potential to shape the nation's future.
+
+In 2002, Dr. Kalam became the President of India, bringing his vision for a developed India by 2020 into the spotlight. Known as the "People's President," he reached out to students, encouraged innovation, and promoted sustainable development.
+
+Dr. Kalam authored numerous books, including his autobiography, Wings of Fire, and motivational works like Ignited Minds and India 2020. He passed away on July 27, 2015, while delivering a lecture to students—doing what he loved most.
+
+His legacy continues to inspire millions across the globe to dream big, work hard, and contribute to society.
+        </p>
+    </div>
+
+    <!-- Video Section -->
+    <div class="video-section">
+        <h2>Video Tribute</h2>
+        <video width="80%" controls>
+            <source src="video.mp4" aria-hidden="true"></i>" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Split Section -->
+    <div class="split-section">
+        <div>
+            <h3>Early Life and Education</h3>
+            <p>
+                Dr. APJ Abdul Kalam was born on October 15, 1931, in Rameswaram, Tamil Nadu, into a modest Tamil Muslim family. Despite financial struggles, his parents instilled in him values of hard work, discipline, and simplicity. Kalam was an average student in school but displayed a keen interest in learning and science.
+He pursued aerospace engineering at the Madras Institute of Technology (MIT), where he overcame challenges through determination and perseverance. His early years laid the foundation for his illustrious career as a scientist and innovator.
+
+
+            </p>
+        </div>
+        <div>
+            <h3>Legacy and Impact</h3>
+            <p>
+                Dr. Kalam envisioned a developed and self-reliant India. He believed in empowering the youth and often said, "Dreams are not those which we see while sleeping, but those that don't let us sleep." As a scientist, he played a pivotal role in advancing India's missile and nuclear programs.
+His contributions extended beyond science as he inspired millions through his books, lectures, and presidency. Even after his tenure as the 11th President of India, he continued to mentor and educate students. Dr. Kalam's legacy endures as a symbol of resilience, innovation, and service to humanity.
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Tribute Page for Dr. APJ Abdul Kalam | Made with ❤️</p>
+    </footer>
+</body>
+</html>
